@@ -1,0 +1,114 @@
+# ========================================
+# IntelliJ IDEA
+# ========================================
+.idea/
+*.iml
+out/
+cmake-build*/
+
+# User-specific IntelliJ settings
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf/
+.idea/**/httpRequests/
+.idea/**/dataSources/
+
+# ========================================
+# VSCode
+# ========================================
+.vscode/
+*.code-workspace
+
+# ========================================
+# Build Systems
+# ========================================
+# Maven
+target/
+
+# Maven wrapper (ignore only generated files)
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Spring Initializr generated help file
+HELP.md
+
+# ========================================
+# Java / JVM
+# ========================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.car
+*.class
+hs_err_pid*
+replay_pid*
+
+# ========================================
+# Logs
+# ========================================
+*.log
+
+# ========================================
+# OS Files
+# ========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ========================================
+# Editor / Tools
+# ========================================
+*.swp
+*.swo
+*.bak
+
+# IDEA compiler cache
+.cache/
+
+# ========================================
+# Environment Files (Sensitive)
+# ========================================
+*.env
+.env*
+*.key
+*.secret
+
+# ========================================
+# Temporary / Generated Files
+# ========================================
+*.tmp
+*.temp
+*.cache
+*.pid
+*.lock
+
+# ========================================
+# Archives
+# ========================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# ========================================
+# Other Development Artifacts
+# ========================================
+bin/
+dist/
+generated/
