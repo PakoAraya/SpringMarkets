@@ -20,6 +20,7 @@ public class Sale {
   private Long id;
   private LocalDate date;
   private String status;
+  private Double total;
 
   //Relationship with the store
   @ManyToOne
