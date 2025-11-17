@@ -1,10 +1,8 @@
 package com.springmarkets.TechTestSupermarket.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -13,6 +11,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class SaleDTO {
   //Sale Info
   private Long id;
@@ -26,5 +25,5 @@ public class SaleDTO {
   private List<SaleDetailDTO> detail;
 
   //Total Price
-  private Double total;
+  private BigDecimal total;
 }

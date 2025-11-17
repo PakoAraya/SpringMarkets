@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ public class Sale {
   private Long id;
   private LocalDate date;
   private String status;
-  private Double total;
+  private BigDecimal total;
 
   //Relationship with the store
   @ManyToOne
