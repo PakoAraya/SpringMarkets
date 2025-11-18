@@ -39,6 +39,7 @@ public class Mapper {
                     .productQuantity(det.getProdQuantity())
                     .productPrice(det.getUnitPrice())
                     //.subTotal Work in professional best practices
+                    //subtotal(det.getUnitPrice() * det.getProdQuantity()) In case to use Double at price
                     .subTotal(
                             det.getUnitPrice()
                                     .multiply(BigDecimal.valueOf(det.getProdQuantity()))
