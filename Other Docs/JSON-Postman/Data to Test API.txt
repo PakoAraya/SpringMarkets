@@ -1,0 +1,68 @@
+
+//This file is not a valid JSON file. It is file is used to test the JSON parser with some data.
+
+STORES
+[
+    {
+        "id": 1,
+        "name": "Springs Store",
+        "address": "Comanche 1299"
+    },
+    {
+        "id": 2,
+        "name": "Malloco Store",
+        "address": "Rosales 0168 Malloco"
+    },
+    {
+        "id": 3,
+        "name": "Downtown Store",
+        "address": "Av Vicuña McKenna 1288"
+    }
+]
+
+PRODUCTS
+{
+    "name": "Coca Cola 1.5L",
+    "category": "Drinks",
+    "price": 1500.0,
+    "quantity": 80
+}
+
+{
+    "name": "Apples",
+    "category": "Fruits and Vegetables",
+    "price": 1500,
+    "quantity": 80
+}
+
+{
+    "id": 3,
+    "name": "Oranges",
+    "category": "Fruits and Vegetables",
+    "price": 1800.0,
+    "quantity": 100
+}
+
+SALE
+{
+    "date": "2025-11-18",
+    "status": "REGISTERED",
+    "storeId": 1,
+    "detail": [
+        {
+            "id": 1,
+            "productName" : "Coca Cola 1.5L",
+            "productQuantity": 2,
+            "productPrice": 1500.0,
+            "subTotal": 3000
+        },
+        {
+            "id": 2,
+            "productName" : "Apples",
+            "productQuantity": 3,
+            "productPrice": 1500.0,
+            "subTotal": 4500
+        }
+    ],
+    "total": 7500.0
+}

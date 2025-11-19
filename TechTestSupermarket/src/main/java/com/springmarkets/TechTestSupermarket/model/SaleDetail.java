@@ -1,9 +1,6 @@
 package com.springmarkets.TechTestSupermarket.model;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,17 +11,20 @@ import java.math.BigDecimal;
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class SaleDetail {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   //Sale
-  @ManyToOne
+  @ManyToOne (fetch = FetchType.LAZY)
+  @JoinColumn(name = "saleId")
   private Sale sale;
 
   //Product
-  @ManyToOne
+  @ManyToOne (fetch = FetchType.LAZY)
+  @JoinColumn(name = "productId")
   private Product product;
   private Integer prodQuantity;
   private BigDecimal unitPrice;

@@ -27,7 +27,7 @@ public class ProductController {
     /* One way to implement
     return ResponseEntity.ok(productService.setProduct(productDTO)); */
      ProductDTO create = productService.setProduct(productDTO);
-     return ResponseEntity.created(URI.create("/api/products " + create.getId())).body(create);
+     return ResponseEntity.created(URI.create("/api/products/" + create.getId())).body(create);
 
    }
 

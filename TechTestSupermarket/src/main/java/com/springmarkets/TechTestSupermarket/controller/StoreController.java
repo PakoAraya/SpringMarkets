@@ -25,7 +25,7 @@ public class StoreController {
   @PostMapping
   public ResponseEntity<StoreDTO> create(@RequestBody StoreDTO storeDTO){
     StoreDTO create = storeService.setStore(storeDTO);
-    return ResponseEntity.created(URI.create("/api/stores " + create.getId())).body(create);
+    return ResponseEntity.created(URI.create("/api/stores/" + create.getId())).body(create);
   }
 
   @PutMapping("/{id}")

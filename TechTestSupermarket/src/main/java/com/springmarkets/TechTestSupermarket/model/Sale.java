@@ -14,6 +14,7 @@ import java.util.List;
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Sale {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +28,6 @@ public class Sale {
   private Store store;
 
   //Relationship with the sale details
-  @OneToMany(mappedBy = "sale")
+  @OneToMany(mappedBy = "sale", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
   private List<SaleDetail> saleDetails = new ArrayList<>();
 }

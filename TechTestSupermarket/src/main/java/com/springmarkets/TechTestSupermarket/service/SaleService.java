@@ -14,6 +14,7 @@ import com.springmarkets.TechTestSupermarket.repository.StoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,6 +74,8 @@ public class SaleService implements ISaleService {
 
     //List Sale Detail
     List<SaleDetail> saleDetails = new ArrayList<>();
+    BigDecimal calculatedTotal = BigDecimal.ZERO;
+
     for(SaleDetailDTO sdDTO : saleDTO.getDetail()){
       //Search product by id (your saleDetailDTO use idProduct)
       Product product = productRepository.findByName(sdDTO.getProductName()).orElse(null);
@@ -88,12 +91,32 @@ public class SaleService implements ISaleService {
       saleDetail.setSale(sale);
 
       saleDetails.add(saleDetail);
+      /* Professional way to calculate total
+      calculatedTotal = calculatedTotal.add(sdDTO.getProductPrice().multiply(new BigDecimal(sdDTO.getProductQuantity())));
+      */
+
+      // Simplified way to calculate total to understand logic
+      // total = total + (price * quantity)
+      BigDecimal price = sdDTO.getProductPrice();
+      BigDecimal quantity = new BigDecimal(sdDTO.getProductQuantity());
+      BigDecimal lineTotal = price.multiply(quantity);
+      calculatedTotal = calculatedTotal.add(lineTotal);
+
+      /* If we work with primitive types like Double
+      calculatedTotal = calculatedTotal + (sdDTO.getProductPrice() * sdDTO.getProductQuantity());
+       */
+
     }
     //Setting sale details list
     sale.setSaleDetails(saleDetails);
 
     //Save in DB
-    saleRepository.save(sale);
+    /*
+    // Ensure that we fetch the updated entity directly from the database,
+    // not the logical input object, so we always return the persisted
+    // and normalized values exactly as stored in the DB.
+    */
+    sale = saleRepository.save(sale);
 
     //Output Mapping
     SaleDTO saleOutput = Mapper.toDTO(sale);
