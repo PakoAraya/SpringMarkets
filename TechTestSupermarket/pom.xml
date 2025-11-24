@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.springmarkets</groupId>
 	<artifactId>TechTestSupermarket</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-Alpha</version>
 	<name>TechTestSupermarket</name>
 	<description>Technical Test Supermarket for Job Interview</description>
 	<url/>
