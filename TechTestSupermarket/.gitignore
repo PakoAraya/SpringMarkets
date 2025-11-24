@@ -1,33 +1,138 @@
-HELP.md
+# ========================================
+# IntelliJ IDEA
+# ========================================
+.idea/
+*.iml
+out/
+cmake-build*/
+
+# User-specific IntelliJ settings
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf/
+.idea/**/httpRequests/
+.idea/**/dataSources/
+
+# Prevent committing IDE-specific properties files
+*.properties
+
+# ========================================
+# VSCode
+# ========================================
+.vscode/
+*.code-workspace
+
+# ========================================
+# Build Systems
+# ========================================
+# Maven
 target/
 .mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Maven backups
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Gradle
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
 
-### VS Code ###
-.vscode/
+# ========================================
+# Spring Boot
+# ========================================
+HELP.md
+# Spring Boot dev tools hot reload
+.spring-boot-devtools.properties
+
+# Ignore default embedded Tomcat logs
+spring.log
+
+# Avoid committing secrets or configs
+src/main/resources/application-*.properties
+!src/main/resources/application-example.properties
+
+# ========================================
+# Java / JVM
+# ========================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.car
+hs_err_pid*
+replay_pid*
+*.jfr
+
+# ========================================
+# Logs
+# ========================================
+*.log
+
+# ========================================
+# Operating Systems
+# ========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ========================================
+# Editors / Tools
+# ========================================
+*.swp
+*.swo
+*.bak
+
+# IDEA compiler cache
+.cache/
+
+# ========================================
+# Environment Files (Sensitive)
+# ========================================
+*.env
+.env*
+*.key
+*.secret
+*.pem
+*.crt
+
+# JetBrains secure files
+**/secrets.json
+
+# ========================================
+# Temporary / Generated Files
+# ========================================
+*.tmp
+*.temp
+*.cache
+*.pid
+*.lock
+
+# ========================================
+# Archives
+# ========================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# ========================================
+# Other Development Artifacts
+# ========================================
+bin/
+dist/
+generated/
