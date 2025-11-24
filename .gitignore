@@ -14,6 +14,7 @@ cmake-build*/
 .idea/**/shelf/
 .idea/**/httpRequests/
 .idea/**/dataSources/
+*.properties
 
 # ========================================
 # VSCode
